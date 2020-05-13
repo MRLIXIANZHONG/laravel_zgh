@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../internal.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            color: #838383;
+        }
+
+        table {
+            font-size: 12px;
+            margin: 10px 50px;
+            line-height: 30px;
+        }
+
+        .txt {
+            width: 300px;
+            height: 21px;
+            line-height: 21px;
+            border: 1px solid #d7d7d7;
+            padding: 5px 10px;
+            margin: 10px;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td><label for="href">音频名称：</label></td>
+            <td><input class="txt" id="name" type="text" placeholder="请输入音频名称" /></td>
+        </tr>
+        <tr>
+            <td><label for="href">音频地址：</label></td>
+            <td><input class="txt" id="href" type="text" placeholder="请输入音频mp3地址" /></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function handleDialogOk() {
+            if ($G('href').value) {
+                var patt1 = /ogg|oga|aac|m4a|mp3|wav/gi;
+                var audioName = document.getElementById("name").value;
+
+                var content = editor.getContent(), hasAudioStyle = true;
+                if (content.indexOf('audio') >= 0) {
+                    hasAudioStyle = false;
+                }
+
+                if (patt1.test($G('href').value)) {
+                    editor.execCommand('insertHtml', (hasAudioStyle ?'<link href="http://img.pccoo.cn/wap/webapp/css/weixinaudio.css" rel="stylesheet" />' :'')+'<p class="weixinAudio"><audio src="' + $G('href').value + '" id="media" width="1" height="1" preload style="display:none"></audio><span id="audio_area" class="db audio_area"><span class="audio_wrp db"><span class="audio_play_area"><i class="icon_audiodefault"></i><i class="icon_audioplaying"></i></span><span class="audio_length_area"><span id="audio_length" class="audio_length tips_global"></span><span id="curent_time">0:00</span><span class="db audio_info_area"><strong class="db audio_title">'+ audioName + '</strong></span><span id="int_c"></span><span class="progress_bar_box" style="width:100%;"><span id="audio_progress" class="progress_bar" style="width: 0%;"></span></span></span></span></span></p>');
+    dialog.close();
+
+    } else {
+    alert("不支持该音频格式");
+    return false;
+    }
+    } else {
+    alert("请输入音频地址");
+    return false;
+    }
+    }
+    dialog.onok = handleDialogOk;
+        $G('href').onkeydown = function (evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 13) {
+                handleDialogOk();
+                return false;
+            }
+        }
+
+        window.onload = function () {
+            var fParent = window.parent.document.getElementsByClassName('edui-dialog');
+            var f = window.parent.document.getElementsByClassName('edui-dialog-body');
+            if (f.length > 0) {
+                f[0].style.width = "592px";
+                fParent[0].style.position = "fixed";
+                fParent[0].style.left = "50%";
+                fParent[0].style.marginLeft = "-296px"
+            }            
+        }
+
+    </script>
+</body>
+</html>

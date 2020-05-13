@@ -1,0 +1,326 @@
+@charset "utf-8";
+.wrapper{ width: 570px;_width:575px;margin: 10px auto; zoom:1;position: relative}
+.tabbody{height: 335px;}
+.tabbody .panel {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+}
+.tabbody .panel.focus {
+    width: 100%;
+    height: 335px;
+    display: block;
+}
+
+.tabbody .panel table td{vertical-align: middle;}
+#videoUrl {
+    width: 490px;
+    height: 21px;
+    line-height: 21px;
+    margin: 8px 5px;
+    background: #FFF;
+    border: 1px solid #d7d7d7;
+}
+#videoSearchTxt{margin-left:15px;background: #FFF;width:200px;height:21px;line-height:21px;border: 1px solid #d7d7d7;}
+#searchList{width: 570px;overflow: auto;zoom:1;height: 270px;}
+#searchList div{float: left;width: 120px;height: 135px;margin: 5px 15px;}
+#searchList img{margin: 2px 8px;cursor: pointer;border: 2px solid #fff} /*不用缩略图*/
+#searchList p{margin-left: 10px;}
+#videoType{
+    width: 65px;
+    height: 23px;
+    line-height: 22px;
+    border: 1px solid #d7d7d7;
+}
+#videoSearchBtn,#videoSearchReset{
+    /*width: 80px;*/
+    height: 25px;
+    line-height: 25px;
+    background: #eee;
+    border: 1px solid #d7d7d7;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+
+
+#preview{position: relative;width: 420px;padding:0;overflow: hidden; margin-left: 10px; _margin-left:5px; height: 280px;background-color: #ddd;float: left}
+#preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;background-color: #666;}
+#preview .previewMsg span{display:block;margin: 125px auto 0 auto;text-align:center;font-size:18px;color:#fff;}
+#preview .previewVideo {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;}
+.edui-video-wrapper fieldset{
+    border: 1px solid #ddd;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    width: 115px;
+}
+
+#videoInfo {width: 120px;float: left;margin-left: 10px;_margin-left:7px;}
+fieldset{
+    border: 1px solid #ddd;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    width: 115px;
+}
+fieldset legend{font-weight: bold;}
+fieldset p{line-height: 30px;}
+fieldset input.txt{
+    width: 65px;
+    height: 21px;
+    line-height: 21px;
+    margin: 8px 5px;
+    background: #FFF;
+    border: 1px solid #d7d7d7;
+}
+label.url{font-weight: bold;margin-left: 5px;color: #06c;}
+#videoFloat div{cursor:pointer;opacity: 0.5;filter: alpha(opacity = 50);margin:9px;_margin:5px;width:38px;height:36px;float:left;}
+#videoFloat .focus{opacity: 1;filter: alpha(opacity = 100)}
+span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: blue}
+
+
+
+
+/* upload video */
+.tabbody #upload.panel {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    background: #fff;
+    display: block;
+}
+.tabbody #upload.panel.focus {
+    width: 100%;
+    height: 335px;
+    display: block;
+    clip: auto;
+}
+.tabbody #upload.panel {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    background: #fff;
+    display: block;
+}
+.tabbody #upload.panel.focus {
+    width: 100%;
+    height: 335px;
+    display: block;
+    clip: auto;
+}
+.wc-upload{
+    float:left;
+    width:420px;
+    height:100%
+}
+.wc-upload .upl-t {
+    border-bottom: 1px solid #eee;
+    position: relative;
+    height: 55px;
+}
+
+.wc-upload .upl-t input {
+    width: 130px;
+    height: 30px;
+    opacity: 0;
+    background: #ccc;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+.wc-upload .upl-t span {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 130px;
+    height: 30px;
+    background: rgb(0,191,218);
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.wc-upload .upl-t .upload-pre {
+   padding-left:200px;
+   line-height:60px;
+   font-size:14px;
+   color:#999
+}
+.wc-upload .upl-b {
+    padding: 10px 0 10px 10px;
+    height:250px;
+    overflow-y: auto;
+}
+
+.wc-upload .upl-b li {
+    list-style: none;
+    float: left;
+    margin: 0 15px 5px 0;
+    position: relative;
+}
+
+.wc-upload .upl-b li > img {
+    width: 112px;
+    height: 112px;
+    cursor: pointer;
+    background:#ccc
+}
+.wc-upload .upl-b li > video {
+    width: 100%;
+    cursor: pointer;
+    background:#ccc
+}
+
+.wc-upload .upl-b li .imgname {
+    width: 112px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.wc-upload .upl-b .uplmask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 112px;
+    height: 112px;
+    background: #000;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.wc-upload .upl-b .uplmasktxt {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 112px;
+    height: 82px;
+    text-align: center;
+    line-height: 112px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wc-upload .upl-b .js-upls {
+    display: none;
+}
+
+
+
+#upload_alignment div{cursor:pointer;opacity: 0.5;filter: alpha(opacity = 50);margin:9px;_margin:5px;width:38px;height:36px;float:left;}
+#upload_alignment .focus{opacity: 1;filter: alpha(opacity = 100)}
+#upload_left { width:427px; float:left; }
+#upload_left .controller { height: 30px; clear: both; }
+#uploadVideoInfo{margin-top:10px;float:right;padding-right:8px;}
+
+
+/* 在线文件的文件预览图标 */
+i.file-preview {
+    display: block;
+    margin: 10px auto;
+    width: 70px;
+    height: 70px;
+    background-image: url("./images/file-icons.png");
+    background-image: url("./images/file-icons.gif") \9;
+    background-position: -140px center;
+    background-repeat: no-repeat;
+}
+i.file-preview.file-type-dir{
+    background-position: 0 center;
+}
+i.file-preview.file-type-file{
+    background-position: -140px center;
+}
+i.file-preview.file-type-filelist{
+    background-position: -210px center;
+}
+i.file-preview.file-type-zip,
+i.file-preview.file-type-rar,
+i.file-preview.file-type-7z,
+i.file-preview.file-type-tar,
+i.file-preview.file-type-gz,
+i.file-preview.file-type-bz2{
+    background-position: -280px center;
+}
+i.file-preview.file-type-xls,
+i.file-preview.file-type-xlsx{
+    background-position: -350px center;
+}
+i.file-preview.file-type-doc,
+i.file-preview.file-type-docx{
+    background-position: -420px center;
+}
+i.file-preview.file-type-ppt,
+i.file-preview.file-type-pptx{
+    background-position: -490px center;
+}
+i.file-preview.file-type-vsd{
+    background-position: -560px center;
+}
+i.file-preview.file-type-pdf{
+    background-position: -630px center;
+}
+i.file-preview.file-type-txt,
+i.file-preview.file-type-md,
+i.file-preview.file-type-json,
+i.file-preview.file-type-htm,
+i.file-preview.file-type-xml,
+i.file-preview.file-type-html,
+i.file-preview.file-type-js,
+i.file-preview.file-type-css,
+i.file-preview.file-type-php,
+i.file-preview.file-type-jsp,
+i.file-preview.file-type-asp{
+    background-position: -700px center;
+}
+i.file-preview.file-type-apk{
+    background-position: -770px center;
+}
+i.file-preview.file-type-exe{
+    background-position: -840px center;
+}
+i.file-preview.file-type-ipa{
+    background-position: -910px center;
+}
+i.file-preview.file-type-mp4,
+i.file-preview.file-type-swf,
+i.file-preview.file-type-mkv,
+i.file-preview.file-type-avi,
+i.file-preview.file-type-flv,
+i.file-preview.file-type-mov,
+i.file-preview.file-type-mpg,
+i.file-preview.file-type-mpeg,
+i.file-preview.file-type-ogv,
+i.file-preview.file-type-webm,
+i.file-preview.file-type-rm,
+i.file-preview.file-type-rmvb{
+    background-position: -980px center;
+}
+i.file-preview.file-type-ogg,
+i.file-preview.file-type-wav,
+i.file-preview.file-type-wmv,
+i.file-preview.file-type-mid,
+i.file-preview.file-type-mp3{
+    background-position: -1050px center;
+}
+i.file-preview.file-type-jpg,
+i.file-preview.file-type-jpeg,
+i.file-preview.file-type-gif,
+i.file-preview.file-type-bmp,
+i.file-preview.file-type-png,
+i.file-preview.file-type-psd{
+    background-position: -140px center;
+}

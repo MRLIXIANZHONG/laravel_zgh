@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: url("../images/login/login_line.jpg") left center repeat-x;
+  height: 100%;
+}
+/*移除表单填充色*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ececec inset;
+}
+/*按钮移上去颜色*/
+.layui-btn-primary:hover {
+  border-color: #1E9FFF;
+  color: #333;
+}
+/*页面背景色*/
+.m-login-bg {
+  background: url("../images/login/login_bg.png") left center repeat-x;
+  height: 100%;
+}
+.m-login {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  margin-left: -350px;
+}
+.m-login h3 {
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  font-size: 28px;
+}
+.m-login .logo {width: 500px;height: 90px;background-image: url(../images/login/login_logo.png);background-size: cover;margin: 0 auto;}
+.m-login .copyright {
+  text-align: center;
+  color: #999;
+  padding-top: 10px;
+}
+.m-login-warp {
+  background: #fff;
+  -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.tc-login {padding: 50px 100px 50px;}
+.tc-register {padding: 30px 100px 30px;}
+.m-login-warp .login_text {width: 100%;text-align: center;font-size: 36px;font-weight: bold;color: #333;}
+.tc-login .layui-form {margin-top: 40px;}
+.tc-register .layui-form {margin-top: 20px;}
+.m-login-warp .layui-input {
+  height: 44px;
+  line-height: 44px;
+  -webkit-transition-property: none;
+  transition-property: none;
+  background-color: #FFF;
+  border: 1px solid #E2E2E2;
+  padding-left: 26px;
+  font-size: 20px;
+}
+.m-login-warp .layui-input .img_code {width: 170px;height: 44px;object-fit: cover;}
+.m-login-warp .m-login-btn {margin-bottom: 0!important;}
+.m-login-warp .m-login-btn .layui-inline {
+  width: 100%;
+}
+.m-login-warp .m-login-btn .layui-inline button {
+  width: 400px;
+  height: 60px;
+  margin: 20px 50px 10px 50px;
+  border-radius: 40px;
+  background:rgba(188,0,0,.8);
+  font-size: 36px;
+  font-weight: bold;
+  color: #F0F0F0;
+}
+.register {width: 100%;text-align: center;font-size: 16px;color: #4437FF;cursor: pointer;}
+.m-login-warp .verifyImg {
+  width: 130px;
+  height: 42px;
+}
+@media screen and (max-width: 450px) {
+  .m-login {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -240px;
+  }
+  .layui-form-item .layui-inline {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    clear: both;
+  }
+  .m-login-warp .m-login-btn .layui-inline {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}
+
+.customer_service {width: 120px;height: 160px;display: flex;flex-direction: column;position: absolute;top: 194px;left: 50%;margin-left: 480px;}
+.customer_service .btn {width: 120px;height: 40px;background:rgba(255,255,255,1);border-radius:4px;display: flex;justify-content: center;align-items: center;}
+.customer_service .btn img {width: 20px;height: 21px;margin-right: 7px;}
+.customer_service .btn span {font-size: 16px;color: #BC0000;}
+.customer_service .qrcode {width: 120px;height: 120px;}
+
+.get-code {width: 35%;height: 44px;line-height: 44px;margin-left: 5%;font-size: 20px;color: #999;border: 1px #ccc solid;}
+
+.tc-login .layui-form-item {margin-bottom: 30px;}
+.tc-register .layui-form-item {margin-bottom: 20px;}
+
+.tc-select {width: 100%;height: 44px;box-sizing: border-box;position: relative; z-index: 999;}
+.tc-select .tc-top {width: 100%;height: 44px;background:rgba(255,255,255,1);border:1px solid rgba(188,0,0,1);border-radius:4px;padding: 0 20px 0 30px;display: flex;align-items: center;justify-content: space-between;font-size: 18px;color: #BC0000;box-sizing: border-box;}
+.tc-select .tc-top img {width: 18px;height: 10px;object-fit: cover;}
+.tc-select .tc-bot {width: 100%;height: 160px;display: flex;}
+.tc-select .tc-bot .tc-left, .tc-select .tc-bot .tc-right {width: 50%;height: 160px;background-color: #FFF;box-shadow:0px 2px 10px rgba(0,0,0,0.1);border-radius:4px;}
+.tc-select .tc-bot .tc-left .tc-option-dft {width: 100%;height: 40px;border-radius:4px 4px 0px 0px;background-color: #BC0000;padding: 0 20px 0 30px;display: flex;align-items: center;justify-content: space-between;font-size: 16px;color: #FFF;}
+.tc-select .tc-bot .tc-left .tc-option-dft img {width: 10px;height: 18px;object-fit: cover;}
+.tc-select .tc-bot .tc-left .tc-option {width: 100%;height: 30px;line-height: 30px;padding: 0 20px 0 30px;font-size: 16px;color: #666;}
+.tc-select .tc-bot .tc-right {display: flex;flex-wrap: wrap;align-content: flex-start;}
+.tc-select .tc-bot .tc-right div {width: 35px;height: 40px;line-height: 40px;text-align: center;font-size: 16px;color: #999;}
+.tc-select .tc-bot .tc-right div.active {color: #BC0000;}
+.hide {display: none!important;}
